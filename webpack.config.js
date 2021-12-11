@@ -1,4 +1,5 @@
 const path = require('path');
+const isDevelopment = process.env.NODE_ENV === 'development';
 
 module.exports = {
   resolve: {
@@ -6,9 +7,10 @@ module.exports = {
       path.resolve('./lib'),
       path.resolve('./lib/client'),
       path.resolve('./node_modules')
-    ]
+    ],
   },
   entry: ["babel-polyfill", "./lib/client/index.js"],
+  target: 'web',
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js'
@@ -29,7 +31,21 @@ module.exports = {
             ]
           }
         }
-      }
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              // Prefer `dart-sass`
+              implementation: require("sass"),
+            },
+          },
+        ],
+      },
     ]
   }
 };

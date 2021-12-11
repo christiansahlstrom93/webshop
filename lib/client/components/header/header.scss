@@ -1,0 +1,12 @@
+$header-background: #004400;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85px;
+  width: 100%;
+  color: #fff;
+  background-color: $header-background;
+}
+
