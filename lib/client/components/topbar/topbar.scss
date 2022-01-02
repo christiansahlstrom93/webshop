@@ -1,14 +1,14 @@
-$header-background: #004400;
+$topbar-background: #004400;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
 
-.header {
+.topbar {
   display: flex;
   align-items: center;
   height: 85px;
   width: 101%;
   color: #fff;
-  background-color: $header-background;
+  background-color: $topbar-background;
   .headline {
     display: flex;
     flex: 1;
@@ -31,7 +31,7 @@ $breakpoint-desktop: 1024px;
 
 
 @media (min-width: $breakpoint-tablet) {
-  .header {
+  .topbar {
     height: 100px;
     .headline {
       font-size: 32px;
