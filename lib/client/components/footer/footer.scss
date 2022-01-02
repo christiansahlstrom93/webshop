@@ -1,0 +1,26 @@
+$footer-background: #627b62;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 125px;
+  width: 100%;
+  background-color: $footer-background;
+  .text {
+    font-size: 16px;
+  }
+}
+
+
+@media (min-width: $breakpoint-tablet) {
+  .footer {
+    height: 200px;
+    .text {
+      font-size: 20px;
+    }
+  }
+}
+

@@ -1,12 +1,44 @@
 $header-background: #004400;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
 
 .header {
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 85px;
-  width: 100%;
+  width: 101%;
   color: #fff;
   background-color: $header-background;
+  .headline {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+
+  .icon {
+    display: flex;
+    padding: 0 4px;
+    flex: 0;
+
+    img {
+      height: 32px;
+      width: 32px;
+    }
+  }
+}
+
+
+@media (min-width: $breakpoint-tablet) {
+  .header {
+    height: 100px;
+    .headline {
+      font-size: 32px;
+    }
+    .icon {
+      display: none;
+    }
+  }
 }
 
