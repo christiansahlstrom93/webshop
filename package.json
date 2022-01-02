@@ -10,8 +10,8 @@
     "dev": "npm run buildDev && NODE_PATH=./lib/client pm2 start ./build/main.js --watch",
     "webpack": "webpack -w",
     "start": "NODE_ENV=production NODE_PATH=./build/main.js pm2-runtime start ecosystem.config.js --env production",
-    "build": "rm -rf dist && webpack --mode production --config webpack.server.js && webpack --mode production --config webpack.config.js",
-    "buildDev": "rm -rf dist && webpack --mode development --config webpack.server.js && webpack --mode development --config webpack.config.js"
+    "build": "rm -rf build && webpack --mode production --config webpack.server.js && webpack --mode production --config webpack.config.js",
+    "buildDev": "rm -rf build && webpack --mode development --config webpack.server.js && webpack --mode development --config webpack.config.js"
   },
   "heroku-run-build-script": true,
   "author": "Christian Frahm Sahlström",
