@@ -1,0 +1,25 @@
+@mixin crumb {
+  text-decoration: none;
+}
+
+.breadcrumbs {
+  display: flex;
+  font-size: 16px;
+  padding: 4px;
+
+  .crumb {
+    color: #000;
+    @include crumb();
+  }
+
+  .crumb-non-click {
+    color: #777;
+    text-decoration: none;
+    @include crumb();
+  }
+
+  .icon {
+    height: 20px;
+    width: 20px;
+  }
+}

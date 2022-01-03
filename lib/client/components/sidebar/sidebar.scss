@@ -1,29 +1,26 @@
 $breakpoint-tablet: 768px;
 
 .sidebar {
-  display: none;
   flex-direction: column;
   min-height: 400px;
-  width: 70%;
+  width: 100%;
   background-color:#627b62;
   color: #FFF;
-  animation-duration: 1s;
-  animation-name: slidein;
+  min-height: 500px;
 
   .category {
     font-size: 20px;
     padding: 8px;
-    cursor: pointer;
 
     .subcategory {
       display: flex;
       flex-direction: column;
       font-size: 16px;
       padding: 8px 0 0 0;  
-      cursor: pointer;
 
       div {
         padding: 4px;
+        cursor: pointer;
       }
     }
   }
@@ -31,6 +28,21 @@ $breakpoint-tablet: 768px;
 
 .show {
   display: flex;
+  position: absolute;
+  animation-duration: 0.5s;
+  animation-name: slidein;
+}
+
+.hide {
+  position: absolute;
+  margin-left: -100vw;
+  animation-duration: 0.5s;
+  animation-name: slideout;
+}
+
+.link {
+  text-decoration: none;
+  color: #FFF;
 }
 
 @keyframes slidein {
@@ -43,9 +55,27 @@ $breakpoint-tablet: 768px;
   }
 }
 
+@keyframes slideout {
+  from {
+    margin-left: 0;
+  }
+
+  to {
+    display: none;
+    margin-left: -100vw;
+  }
+}
+
 @media (min-width: $breakpoint-tablet) {
   .sidebar {
     display: flex;
-    width: 250px;
+    width: 300px;
+  }
+
+  .hide {
+    position: relative;
+    margin-left: 0;
+    animation-name: none;
+    animation-duration: 0s;
   }
 }

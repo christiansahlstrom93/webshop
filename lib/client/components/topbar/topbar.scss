@@ -6,21 +6,26 @@ $breakpoint-desktop: 1024px;
   display: flex;
   align-items: center;
   height: 85px;
-  width: 101%;
+  width: 100%;
   color: #fff;
   background-color: $topbar-background;
+
   .headline {
     display: flex;
     flex: 1;
+    color: #fff;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 28px;
+    font-style: italic;
+    text-decoration: none;
   }
 
   .icon {
     display: flex;
     padding: 0 4px;
     flex: 0;
+    cursor: pointer;
 
     img {
       height: 32px;
