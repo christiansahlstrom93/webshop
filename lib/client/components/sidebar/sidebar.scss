@@ -2,11 +2,10 @@ $breakpoint-tablet: 768px;
 
 .sidebar {
   flex-direction: column;
-  min-height: 400px;
   width: 100%;
   background-color:#627b62;
   color: #FFF;
-  min-height: 500px;
+  height: 100%;
 
   .category {
     font-size: 20px;
@@ -70,6 +69,7 @@ $breakpoint-tablet: 768px;
   .sidebar {
     display: flex;
     width: 300px;
+    height: auto;
   }
 
   .hide {
